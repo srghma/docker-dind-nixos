@@ -39,6 +39,9 @@ ENV \
 
 ###########
 
+# FIXME:
+# /nix/var/nix/profiles/default/etc/profile.d/nix.sh overvrites PATH
+
 RUN /nix/var/nix/profiles/default/bin/nix-env -i git git-crypt curl \
   && /nix/var/nix/profiles/default/bin/nix-store --optimise \
   && /nix/var/nix/profiles/default/bin/nix-store --verify --check-contents
